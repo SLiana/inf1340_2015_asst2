@@ -12,6 +12,26 @@ __email__ = "ses@drsusansim.org"
 __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
+#Create Table 1: GRADUATES
+GRADUATES = ("Number", "Surname", "Age")
+
+#Create the data that the GRADUATES table will contain
+data = ([[7274, "Robinson", 37],
+        [7432, "O'Malley", 39],
+        [9824,  "Darkes", 38]])
+
+#Identify the colums/raws 
+row_format ="{:>15}" * (len(GRADUATES) + 1)
+print row_format.format("", *GRADUATES)
+
+#Identify the line numbering of rows
+line_number = 1
+for team, row in zip(GRADUATES, data):
+    print row_format.format (line_number, *row)
+    line_number += 1
+    
+    
+
 
 def union(table1, table2):
     """
